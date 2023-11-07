@@ -140,3 +140,35 @@ table th {
 .p-footer-color {
   color: #FFFFFF !important;
 }
+
+.fancyButton{
+  padding: 10px !important;
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+
+  --bs-btn-color: #18bc9c;
+  --bs-btn-border-color: #18bc9c;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #18bc9c;
+  --bs-btn-hover-border-color: #18bc9c;
+  --bs-btn-focus-shadow-rgb: 24, 188, 156;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #18bc9c;
+  --bs-btn-active-border-color: #18bc9c;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #18bc9c;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #18bc9c;
+  --bs-gradient: none;
+
+  transition:
+  width 2s,
+  height 2s,
+  background-color 2s,
+  rotate 2s;
+}
+
+.fancyButton:hover{
+  color: var(--bs-btn-hover-color);
+  rotate: 360deg;
+}
