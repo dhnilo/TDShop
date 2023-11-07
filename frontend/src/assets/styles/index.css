@@ -7,10 +7,25 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background: linear-gradient(to bottom, #f2f2f2, rgba(142, 120, 253, .943));
+  /* background: linear-gradient(to bottom, #f2f2f2, rgba(142, 120, 253, .943)); */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
   min-height: 100vh;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlgiht-color: rgba(0,0,0,0,);
+  animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 main {
@@ -86,6 +101,35 @@ table th {
   width: 75px;
   height: 75px;
   object-fit: scale-down;
+}
+
+.title{
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 2px 2px var(--bs-purple);
+}
+
+.whiteText {
+  color: white;
+  font-size: 17px;
+}
+
+.myButton {
+  background-color: var(--bs-purple);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 4px 2px;
+  cursor: pointer;
+
 }
 
 .margin-text-box-2 {

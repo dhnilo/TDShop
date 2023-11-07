@@ -42,7 +42,7 @@ const LoginScreen = () => {
   
   return (
     <FormContainer>
-      <h1>Sign In</h1>
+      <h1 className='title'>Sign In</h1>
 
       <Form onSubmit={submitHandler}>
         <Form.Group className='margin-text-box-2' controlId='email'>
@@ -74,10 +74,10 @@ const LoginScreen = () => {
 
       <Row className='py-3'>
         <Col>
-          New Customer?{' '}
+          <p className='whiteText'>New Customer? {'  '}
           <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
             Register
-          </Link>
+          </Link></p>
         </Col>
       </Row>
     </FormContainer>

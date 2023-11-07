@@ -54,7 +54,7 @@ const ProfileScreen = () => {
             <h2>User Profile</h2>
 
             <Form onSubmit={submitHandler}>
-                <Form.Group controlId='name' className='my-2'>
+                <Form.Group controlId='name' className='margin-text-box-2'>
                     <Form.Label>Name</Form.Label>
                     <Form.Control
                         type='name'
@@ -64,7 +64,7 @@ const ProfileScreen = () => {
                     ></Form.Control>
                 </Form.Group>
 
-                <Form.Group controlId='email' className='my-2'>
+                <Form.Group controlId='email' className='margin-text-box-2'>
                     <Form.Label>Email Address</Form.Label>
                     <Form.Control
                         type='email'
@@ -74,7 +74,7 @@ const ProfileScreen = () => {
                     ></Form.Control>
                 </Form.Group>
 
-                <Form.Group controlId='password' className='my-2'>
+                <Form.Group controlId='password' className='margin-text-box-2'>
                     <Form.Label>Password</Form.Label>
                     <Form.Control
                         type='password'
@@ -84,7 +84,7 @@ const ProfileScreen = () => {
                     ></Form.Control>
                 </Form.Group>
 
-                <Form.Group controlId='confirmPassword' className='my-2'>
+                <Form.Group controlId='confirmPassword' className='margin-text-box-2'>
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control
                         type='password'
@@ -94,7 +94,7 @@ const ProfileScreen = () => {
                     ></Form.Control>
                 </Form.Group>
 
-                <Button type='submit' variant='primary' className='my-2'>
+                <Button type='submit' variant='primary' className='margin-text-box-2'>
                     Update
                 </Button>
                 { loadingUpdateProfile && <Loader />}

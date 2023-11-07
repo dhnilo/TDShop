@@ -232,7 +232,8 @@ h1,
   margin-bottom: 1.2rem;
   font-weight: 500;
   line-height: 1.2;
-  color: var(--bs-heading-color, inherit);
+  color: var(--bs-purple);
+  text-shadow: .75px .75px black;
 }
 
 h1,
@@ -467,6 +468,7 @@ th {
 
 label {
   display: inline-block;
+  color: black;
 }
 
 button {
@@ -833,6 +835,7 @@ progress {
 
 .col {
   flex: 1 0 0%;
+  /* color: black; */
 }
 
 .row-cols-auto > * {
@@ -2109,6 +2112,7 @@ progress {
 }
 .form-label {
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .col-form-label {
@@ -3014,7 +3018,7 @@ textarea.form-control.is-invalid {
 }
 
 .btn {
-  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-padding-x: .75rem;
   --bs-btn-padding-y: 0.675rem;
   --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
@@ -3910,6 +3914,7 @@ fieldset:disabled .btn {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
+    color: white;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
@@ -3921,7 +3926,8 @@ fieldset:disabled .btn {
   color: var(--bs-nav-link-hover-color);
 }
 .nav-link.disabled {
-  color: var(--bs-nav-link-disabled-color);
+  /* color: var(--bs-nav-link-disabled-color); */
+  color: black;
   pointer-events: none;
   cursor: default;
 }

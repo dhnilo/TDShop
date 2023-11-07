@@ -28,7 +28,7 @@ const CartScreen = () => {
   return (
     <Row>
       <Col md={8}>
-        <h1 style={{ marginBottom: '20px' }}>Shopping Cart</h1>
+        <h1 className='title' style={{ marginBottom: '20px' }}>Shopping Cart</h1>
         {cartItems.length === 0 ? (
           <Message>
             Your cart is empty <Link to='/'>Go Back</Link>
@@ -96,6 +96,13 @@ const CartScreen = () => {
                 onClick={checkoutHandler}
               >
                 Proceed To Checkout
+              </Button>
+              <Button
+                type='button'
+                className='myButton'
+                onClick={() => navigate(-1)}
+              >
+                Continue Shopping
               </Button>
             </ListGroup.Item>
           </ListGroup>
