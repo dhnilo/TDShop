@@ -9,19 +9,30 @@ const getProducts = asyncHandler(async (req, res) => {
   const pageSize = process.env.PAGINATION_LIMIT;
   const page = Number(req.query.pageNumber) || 1;
   
-  const keyword = req.query.keyword ? { 
-    name: {
-      $regex: req.query.keyword,
-      $options: 'i'
-    }
-  } : {};
+ const { keyword } = req.query;
+ let query = {};
 
-  const count = await Product.countDocuments({ ...keyword });
-  const products = await Product.find({ ...keyword })
+ if(keyword) {
+    const categories = await Product.find().distinct('category');
+    if(categories.some(category => category.toLowerCase().includes(keyword.toLowerCase()))) {
+      query.category = { 
+          $regex: keyword, 
+          $options: 'i' 
+        } 
+    } else { 
+        query.name = { 
+        $regex: keyword, 
+        $options: 'i' 
+      }
+    }
+  }
+
+  const count = await Product.countDocuments({ ...query });
+  const products = await Product.find({ ...query })
     .limit(req.query.limit)
     .skip(req.query.skip);
 
-  res.json({ products, page, pages: Math.ceil(count / pageSize) });
+  res.json({ products });
 });
 
 // @desc    Fetch a product
