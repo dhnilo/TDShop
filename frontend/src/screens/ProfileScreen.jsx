@@ -105,18 +105,18 @@ const ProfileScreen = () => {
             { isLoading ? <Loader /> : error ? ( <Message variant='danger'>
                { error?.data?.message || error.error }
             </Message>) : ( 
-                <Table striped hover responsive className='table-sm'>
+                <Table hover responsive className='table-sm'>
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Date</th>
-                            <th>Total</th>
-                            <th>Paid</th>
-                            <th>Delivered</th>
+                            <th className='whiteText'>ID</th>
+                            <th className='whiteText'>Date</th>
+                            <th className='whiteText'>Total</th>
+                            <th className='whiteText'>Paid</th>
+                            <th className='whiteText'>Delivered</th>
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='whiteText'>
                         { orders?.map(order => (
                             <tr key={order._id}>
                                 <td>{order._id}</td>
