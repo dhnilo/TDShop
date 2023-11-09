@@ -310,7 +310,19 @@ const products = [
     countInStock: 10,
     rating: 5,
     numReviews: 5,
-  }
+  },
+  {
+    name: "Bucket of Baseballs",
+    image: "/images/bucket-of-balls.webp",
+    description:
+      "A bucket of baseballs. Perfect for practice or a game.",
+    brand: "Wilson",
+    category: "Sports Equipment",
+    price: 124.99,
+    countInStock: 17,
+    rating: 5,
+    numReviews: 8,
+  },
 ];
 
 export default products;
